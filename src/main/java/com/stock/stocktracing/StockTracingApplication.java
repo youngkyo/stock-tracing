@@ -15,9 +15,9 @@ public class StockTracingApplication{
 
 
 	public static void main(String[] args) {
-//		new SpringApplicationBuilder(StockTracingApplication.class)
-//			.properties(APPLICATION_LOCATIONS)
-//			.run(args);
-		SpringApplication.run(StockTracingApplication.class, args);
+		new SpringApplicationBuilder(StockTracingApplication.class)
+			.properties(APPLICATION_LOCATIONS)
+			.run(args);
+//		SpringApplication.run(StockTracingApplication.class, args);
 	}
 }
