@@ -45,8 +45,8 @@ deploy:
       bucket: stock-tracing-s3 # S3 버킷
       key: stock-tracing.zip # 빌드 파일을 압축해서 전달
       bundle_type: zip
-      application: stock-tracing. # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
-      deployment_group: stock-tracing.-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+      application: stock-tracing # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+      deployment_group: stock-tracing-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
       region: ap-northeast-2
       wait-until-deployed: true
       on:
