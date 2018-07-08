@@ -17,6 +17,11 @@ public class WebController {
 
 	@GetMapping("/")
 	public String main(Model model) {
+		return "hello";
+	}
+
+	@GetMapping("/")
+	public String stockAdd(Model model) {
 //		model.addAttribute("posts", postsService.findAllDesc());
 		model.addAttribute("posts", recommendStockService.findAllDesc());
 		return "stock/imagine";
