@@ -1,5 +1,6 @@
 package com.stock.stocktracing;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
@@ -14,8 +15,9 @@ public class StockTracingApplication{
 
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(StockTracingApplication.class)
-			.properties(APPLICATION_LOCATIONS)
-			.run(args);
+//		new SpringApplicationBuilder(StockTracingApplication.class)
+//			.properties(APPLICATION_LOCATIONS)
+//			.run(args);
+		SpringApplication.run(StockTracingApplication.class, args);
 	}
 }

@@ -19,7 +19,6 @@ public class WebController {
 
 	@GetMapping("/stock")
 	public String stockAdd(Model model) {
-//		model.addAttribute("posts", postsService.findAllDesc());
 		model.addAttribute("posts", recommendStockService.findAllDesc());
 		return "stock/imagine";
 	}
