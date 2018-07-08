@@ -13,7 +13,7 @@ public class WebController {
 	private MemberRecommendStockService recommendStockService;
 
 	@GetMapping("/")
-	public String main(Model model) {
+	public String main() {
 		return "hello";
 	}
 
