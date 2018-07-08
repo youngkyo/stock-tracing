@@ -20,7 +20,7 @@ public class WebController {
 		return "hello";
 	}
 
-	@GetMapping("/")
+	@GetMapping("/stock")
 	public String stockAdd(Model model) {
 //		model.addAttribute("posts", postsService.findAllDesc());
 		model.addAttribute("posts", recommendStockService.findAllDesc());
