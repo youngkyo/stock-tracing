@@ -20,12 +20,17 @@ notifications:
     recipients:
       - ykyo.jung@gmail.com
 
+before_deploy:
+  - zip -r stock-tracing *
+  - mkdir -p deploy
+  - mv stock-tracing.zip deploy/stock-tracing.zip
 
 deploy:
   - provider: s3
+    local-dir: deploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: stock-tracing-s3 # 6-3-3에서 생성한 S3 버킷
+    bucket: stock-tracing-s3
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
