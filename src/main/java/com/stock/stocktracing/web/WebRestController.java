@@ -1,7 +1,8 @@
 package com.stock.stocktracing.web;
 
+import com.stock.stocktracing.domain.dto.MemberRecommendStockDto;
 import com.stock.stocktracing.domain.dto.PostsSaveRequestDto;
-import com.stock.stocktracing.domain.repository.PostsRepository;
+import com.stock.stocktracing.domain.service.MemberRecommendStockService;
 import com.stock.stocktracing.domain.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WebRestController {
 
-	private PostsRepository repository;
 
 	@Autowired
 	private PostsService service;
+
+	@Autowired
+	private MemberRecommendStockService memberRecommendStockService;
 
 	@GetMapping("/hello")
 	public String hello() {
@@ -27,5 +30,10 @@ public class WebRestController {
 	@PostMapping("/posts")
 	public void savePosts(@RequestBody PostsSaveRequestDto dto) {
 		service.save(dto);
+	}
+
+	@PostMapping("/stock/Register")
+	public void saveMemberRecommendStock(@RequestBody MemberRecommendStockDto recommendStockDto) {
+		memberRecommendStockService.save(recommendStockDto);
 	}
 }

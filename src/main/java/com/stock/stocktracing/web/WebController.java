@@ -1,5 +1,6 @@
 package com.stock.stocktracing.web;
 
+import com.stock.stocktracing.domain.service.MemberRecommendStockService;
 import com.stock.stocktracing.domain.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -12,9 +13,12 @@ public class WebController {
 
 	private PostsService postsService;
 
+	private MemberRecommendStockService recommendStockService;
+
 	@GetMapping("/")
 	public String main(Model model) {
-		model.addAttribute("posts", postsService.findAllDesc());
-		return "main";
+//		model.addAttribute("posts", postsService.findAllDesc());
+		model.addAttribute("posts", recommendStockService.findAllDesc());
+		return "stock/imagine";
 	}
 }
