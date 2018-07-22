@@ -1,6 +1,7 @@
 package com.stock.stocktracing.domain.dto;
 
 import com.stock.stocktracing.domain.entity.Posts;
+import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Getter
+@Data
 public class PostsMainResponseDto {
 
 	private Long id;

@@ -47,4 +47,9 @@ public class WebRestController {
 			.findFirst()
 			.orElse("");
 	}
+
+	@GetMapping("test")
+	public void getStock() {
+		service.getStockInfo();
+	}
 }
