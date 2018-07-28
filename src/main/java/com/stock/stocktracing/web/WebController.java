@@ -14,7 +14,7 @@ public class WebController {
 
 	@GetMapping("/")
 	public String main() {
-		return "hello";
+		return "main";
 	}
 
 	@GetMapping("/stock")
